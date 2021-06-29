@@ -1,10 +1,6 @@
-# solver.py
+
 def solver(board):
-    """
-    Solves a sudoku board using backtracking
-    :param bo: 2d list of ints
-    :return: solution
-    """
+
     find = find_empty(board)
     if find:
         row, col = find
@@ -24,13 +20,6 @@ def solver(board):
 
 
 def valid(board, pos, num):
-    """
-    Returns if the attempted move is valid
-    :param bo: 2d list of ints
-    :param pos: (row, col)
-    :param num: int
-    :return: bool
-    """
 
     # Check row
     for i in range(0, len(board)):
@@ -56,11 +45,6 @@ def valid(board, pos, num):
 
 
 def find_empty(board):
-    """
-    finds an empty space in the board
-    :param bo: partially complete board
-    :return: (int, int) row col
-    """
 
     for i in range(len(board)):
         for j in range(len(board[0])):
@@ -71,11 +55,7 @@ def find_empty(board):
 
 
 def print_board(board):
-    """
-    prints the board
-    :param bo: 2d List of ints
-    :return: None
-    """
+
     for i in range(len(board)):
         if i % 3 == 0 and i != 0:
             print("- - - - - - - - - - - - - -")
